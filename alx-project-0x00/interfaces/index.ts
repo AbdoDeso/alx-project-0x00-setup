@@ -4,5 +4,5 @@ export interface PillProps {
 
 export interface ButtonProps {
     title: 'first' | 'second' | 'third',
-    style: 'small' | 'mid' | 'large'
+    styles:  'small' | 'mid' | 'large'
 }

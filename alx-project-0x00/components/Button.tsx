@@ -11,11 +11,11 @@ const Style = {
     large : "text-5xl p-20 text-black rounded-full bg-blue-100"
 }
 
-const Button: React.FC<ButtonProps> = ({title, style}) => {
+const Button: React.FC<ButtonProps> = ({title, styles}) => {
     return (
         <div className="pt-20">
-            <button  type="button" className={`${Style[style]}`}>
-               <a href="#"> {Text[title]}</a>
+            <button  type="button" className={`${Style[styles]}`}>
+               <a href=""> {Text[title]}</a>
             </button>
         </div>
     )
