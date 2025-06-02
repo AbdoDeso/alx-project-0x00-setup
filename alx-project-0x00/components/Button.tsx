@@ -1,22 +1,27 @@
 import { ButtonProps } from "@/interfaces";
+import { title } from "process";
+ 
+const buttonTitle = {
+    first: "First Value" ,
+    seconed: "Second Value",
+    last: "The Last Value"
 
-const Text = {
-    first : "First Value",
-    second : "Second Value",
-    third : "The Last Value"
 }
 const Style = {
-    small : "text-xl p-6 text-black rounded-sm bg-red-100",
-    mid : "text-2xl p-10 text-black rounded-md bg-yellow-100",
-    large : "text-5xl p-20 text-black rounded-full bg-blue-100"
+  small:  "rounded-sm",
+  mid:  "rounded-mid",
+  large:  "rounded-lg",
 }
 
-const Button: React.FC<ButtonProps> = ({title, styles}) => {
+const Button: React.FC<ButtonProps> = ({TitleVariants ,StyleVariants}) => {
+
     return (
-        <div className="pt-20">
-            <button  type="button" className={`${Style[styles]}`}>
-               <a href=""> {Text[title]}</a>
+        <div className="text-2xl p-10 text-black  bg-yellow-100 pt-20">
+       
+            <button  type="button" className={`${Style[StyleVariants]}`}>
+               <a href="#"> {buttonTitle[TitleVariants]}</a>
             </button>
+            
         </div>
     )
 

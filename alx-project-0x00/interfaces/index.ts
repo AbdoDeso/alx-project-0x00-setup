@@ -3,6 +3,9 @@ export interface PillProps {
 }
 
 export interface ButtonProps {
-    title: 'first' | 'second' | 'third',
-    styles:  'small' | 'mid' | 'large'
+    title: string ,
+    styles: string ,
+    TitleVariants:  'first' | 'second' | 'last',
+    StyleVariants?: 'small'|'mid'|'large',  
+
 }
