@@ -1,22 +1,23 @@
-import { ButtonProps } from "@/interfaces";
+import { ButtonProps ,TitleVariants ,StyleVariants} from "@/interfaces";
 
-const buttonTitle = {
+
+const Title: Record<TitleVariants,string> = {
   first: "First Value",
   second: "Second Value", 
   last: "The Last Value"
 };
 
-const Style = {
-  small: "rounded-sm",
-  mid: "rounded-md", 
-  large: "rounded-lg"
+const Style: Record<StyleVariants,string> = {
+  'rounded-sm': 'rounded-sm',
+  'rounded-md': 'rounded-md', 
+  'rounded-lg': 'rounded-lg'
 };
 
-const Button: React.FC<ButtonProps> = ({ TitleVariants, StyleVariants }) => {
+const Button: React.FC<ButtonProps> = ({title = 'second',styles ='rounded-md'}) => {
   return (
     <div className="text-2xl p-10 text-black bg-yellow-100 pt-20">
-      <button type="button" className={Style[StyleVariants]}>
-        {buttonTitle[TitleVariants]}
+      <button type="button" className={`${Style[styles]}`}>
+        {Title[title]}
       </button>
     </div>
   );

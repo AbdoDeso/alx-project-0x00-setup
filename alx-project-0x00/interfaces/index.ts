@@ -1,11 +1,10 @@
 export interface PillProps {
   title: string
 }
+export type  TitleVariants =  'first' | 'second' | 'last';
+export type  StyleVariants =  'rounded-sm'|'rounded-md'|'rounded-lg';  
 
 export interface ButtonProps {
-    title: string ,
-    styles: string ,
-    TitleVariants:  'first' | 'second' | 'last',
-    StyleVariants: 'small'|'mid'|'large',  
-
+    title: TitleVariants,
+    styles: StyleVariants,
 }
