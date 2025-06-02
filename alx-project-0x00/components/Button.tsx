@@ -7,7 +7,7 @@ const Title: Record<TitleVariants,string> = {
   last: "The Last Value"
 };
 
-const Style: Record<StyleVariants,string> = {
+const shapes: Record<StyleVariants,string> = {
   'rounded-sm': 'rounded-sm',
   'rounded-md': 'rounded-md', 
   'rounded-lg': 'rounded-lg'
@@ -16,7 +16,7 @@ const Style: Record<StyleVariants,string> = {
 const Button: React.FC<ButtonProps> = ({title = 'second',styles ='rounded-md'}) => {
   return (
     <div className="text-2xl p-10 text-black bg-yellow-100 pt-20">
-      <button type="button" className={`${Style[styles]}`}>
+      <button type="button" className={`${shapes[styles]}`}>
         {Title[title]}
       </button>
     </div>

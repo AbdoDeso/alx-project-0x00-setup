@@ -5,6 +5,6 @@ export type  TitleVariants = string| 'first' | 'second' | 'last';
 export type  StyleVariants = string|  'rounded-sm'|'rounded-md'|'rounded-lg';  
 
 export interface ButtonProps {
-    title:string| TitleVariants,
-    styles?:string| StyleVariants,
+    title:string,
+    styles:string,
 }
