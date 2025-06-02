@@ -6,5 +6,5 @@ export type  StyleVariants = string|  'rounded-sm'|'rounded-md'|'rounded-lg';
 
 export interface ButtonProps {
     title:string,
-    styles:string,
+    styles : string
 }
